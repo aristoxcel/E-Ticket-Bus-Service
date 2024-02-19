@@ -1,5 +1,6 @@
 let count =1;
 let totalSeat = 39;
+let array = [];
 const seatCount = document.getElementById("seat-count");
 const decreaseTotalSeat = document.getElementById('decrease-total-seat');
 
@@ -7,7 +8,7 @@ let totalPrice= parseInt(document.getElementById("total-price").innerText);
 let grandTotalPrice= parseInt(document.getElementById("grand-total-price").innerText);
 let couponBtn = document.getElementById("coupon-btn");
 
-// select sit and sit select related function
+// select sit and it's select related function
 let seats = document.getElementsByClassName("h5");
 for (let seat of seats){
     seat.addEventListener("click", function(e){
@@ -16,6 +17,16 @@ for (let seat of seats){
         seat.setAttribute("disabled", true);
         
         let seatNo = e.target.innerText;
+        
+        array.push(seatNo);
+        let arrayLength = array.length;
+        if(arrayLength>=5){
+            alert("You can highest buy 4 tickets at a time");
+            e.target.classList.remove("bg-[#1DD100]", "text-white")
+            return
+        }
+        console.log(arrayLength)
+
 
         const div = document.createElement("div");
         const p1 = document.createElement("p");
@@ -39,13 +50,12 @@ for (let seat of seats){
         
         
         if(count>4){
-            alert("You can highest buy 4 tickets at a time")
+
             couponBtn.removeAttribute("disabled", true);
-            for (let i of seats){
-            i.setAttribute("disabled", true);
-            }
+
         }
 
+       
         decreaseTotalSeat.innerText = totalSeat;
         totalSeat--;
 
