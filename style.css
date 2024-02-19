@@ -1,0 +1,24 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:wght@100..900&display=swap');
+
+
+.inter-font {
+  font-family: "Inter", sans-serif;
+}
+
+.raleway-font {
+  font-family: "Raleway", sans-serif;
+}
+
+.h5{
+color: rgba(3, 7, 18, 0.50);
+font-family:  "Inter", sans-serif;
+font-size: 18px;
+font-weight: 500;
+background-color: #F7F8F8;
+border-radius: 12px;
+width: 40%;
+text-align: center;
+padding-top: 10px;
+padding-bottom: 10px;
+}
