@@ -11,6 +11,7 @@ let couponBtn = document.getElementById("coupon-btn");
 let seats = document.getElementsByClassName("h5");
 for (let seat of seats){
     seat.addEventListener("click", function(e){
+            
         e.target.classList.add("bg-[#1DD100]", "text-white");
         seat.setAttribute("disabled", true);
         
